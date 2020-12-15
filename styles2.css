@@ -295,10 +295,14 @@ h1 {
 .right p {
   margin: 0;
 }
-
-.card:hover {
-  box-shadow: 1px 4px 6px black;
+.card {
+  display: block;
 }
+.card:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
 .right p {
   font-family: Roboto;
   font-size: 14px;
@@ -337,13 +341,14 @@ h1 {
 }
 .description {
   position: relative;
+  overflow: hidden;
 }
 .descrip {
   position: absolute;
+  transform: translate(-50%, 150%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  color: white;
   width: 322px;
   height: 168px;
   margin: 0;
@@ -353,6 +358,7 @@ h1 {
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.03em;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .description::before {
@@ -363,14 +369,13 @@ h1 {
   top: 0;
   left: 0;
   background-color: var(--blue);
-  opacity: 0;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
 }
 .link-description:hover .descrip {
-  opacity: 1;
-  transition: 250ms opacity linear;
-  color: white;
+  transform: translate(-50%, -50%);
 }
 .link-description:hover .description::before {
   opacity: 0.9;
-  transition: 250ms opacity linear;
+  transform: translateY(0%);
 }
