@@ -422,6 +422,7 @@ address a:not(:last-child) {
 .icon-link:hover {
   background-color: var(--blue);
 }
+
 .icon-link:hover .wh {
   fill: var(--white);
 }
@@ -548,7 +549,7 @@ address {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.6пше);
+  transform: translate(-50%, -50%) scale(0.6);
 }
 
 .modal {
