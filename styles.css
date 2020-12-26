@@ -514,6 +514,7 @@ address {
 .mail-svg {
   fill: var(--grey);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail:hover .mail-svg {
   fill: var(--blue);
@@ -522,6 +523,7 @@ address {
 .phone-svg {
   fill: var(--grey);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone:hover .phone-svg {
